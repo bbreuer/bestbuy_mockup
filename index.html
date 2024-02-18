@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom Classes</title>
-    <link href="style.css" rel="stylesheet">
+    <link href="output.css" rel="stylesheet">
 </head>
 <body>
     <div class="bg-blue-900 w-screen h-10 shadow-lg flex justify-start items-center gap-4">
@@ -13,9 +13,9 @@
         <div class="text-xs text-slate-400 hover:cursor-pointer hover:underline">Best Buy Business</div>
         <div class="text-xs text-slate-400 hover:cursor-pointer hover:underline">Shop with an Expert</div>
     </div>
-    
-    
-    <div class="bg-blue-700 w-screen h-20 border-b-2 border-b-gray-300 flex gap-4 items-center">
+
+    <div class="bg-blue-700 w-screen h-20 border-b-2 border-b-gray-300 flex  items-center">
+        
         <div class="ml-4 mr-10">
             <img class="h-10 hover:cursor-pointer" src="bestbuy_logo.png">
         </div>
@@ -24,15 +24,35 @@
             <div>
                 <img class="h-6 mt-1 items-center" src="bars-solid.svg">
             </div>
-            <div class="text-white items-center text-2xl">Menu</div>
+            <div class="text-white items-center text-2xl" id="toggleButton">Menu</div>
         </div>
 
-        <div class="relative flex items-center">
-            <input class="rounded-md p-2 w-96" type="text" placeholder="What can we help you find today?">
+        
+
+        <div class="hidden relative sm:flex items-center">
+            
+            <input class="rounded-md p-2 w-64 lg:w-96 text-sm lg:text-lg" type="text" placeholder="What can we help you find today?">
             <div class="absolute right-0 mr-2">
                 <img class="h-4" src="magnifying-glass-solid.svg">
             </div>
         </div>
+
+        <div class="flex absolute right-0 gap-4 mr-10">
+            <div class="hidden md:flex gap-1 hover:cursor-pointer">
+                <div>
+                    <img class="h-6 mt-1 items-center" src="/dist/store.svg">
+                </div>
+                <div class="text-white items-center text-2xl">Manchester</div>
+            </div>
+    
+            <div class="flex gap-1">
+                <div>
+                    <img class="h-6 mt-1 items-center hover:cursor-pointer" src="/dist/cart.svg">
+                </div>
+                <div class="hidden md:flex text-white items-center text-2xl hover:cursor-pointer hover:underline">Cart</div>
+            </div>
+        </div>
+        
 
 
     </div>
@@ -44,6 +64,5 @@
         <div class="text-xs text-white hover:cursor-pointer hover:underline">Best Buy Outlet</div>
         <div class="text-xs text-white hover:cursor-pointer hover:underline">More</div>
     </div>
-
 </body>
 </html>
